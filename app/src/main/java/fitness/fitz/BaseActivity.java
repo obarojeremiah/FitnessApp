@@ -46,8 +46,6 @@ import fitness.fitz.data.models.User;
 public class BaseActivity extends AppCompatActivity implements MenuItem.OnMenuItemClickListener {
 
     public static final String TAG = "Nope";
-    public static final String GIT = "https://github.com/vyvital";
-    public static final String LINKEDIN = "https://www.linkedin.com/in/vyvital";
     public FirebaseAuth mAuth;
     public User userz;
     Dialog aboutDialog;

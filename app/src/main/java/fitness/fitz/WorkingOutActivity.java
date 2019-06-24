@@ -45,11 +45,6 @@ public class WorkingOutActivity extends AppCompatActivity implements ConfettoGen
     protected ViewGroup container;
     protected int goldDark, goldMed, gold, goldLight;
     protected int[] colors;
-   /* private long stopped = 0;
-    boolean started = false;
-    boolean paused = false;
-    private AdView mAdView;
-    public Chronometer chrono;*/
     public String[] quotes;
     RecyclerView workoutRV;
     private List<Bitmap> confettoBitmaps;
@@ -59,9 +54,6 @@ public class WorkingOutActivity extends AppCompatActivity implements ConfettoGen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_working_out);
-       // mAdView = findViewById(R.id.banner);
-       // AdRequest adRequest = new AdRequest.Builder().build();
-      //  mAdView.loadAd(adRequest);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
         ab.setTitle(getResources().getString(R.string.Fitz));
         BitmapDrawable backgrd = new BitmapDrawable(BitmapFactory.decodeResource(getResources(), R.drawable.bar));
@@ -83,31 +75,6 @@ public class WorkingOutActivity extends AppCompatActivity implements ConfettoGen
         Days day = b.getParcelable("day");
 
         done = findViewById(R.id.done);
-       // start = findViewById(R.id.btnStart);
-        //chrono = findViewById(R.id.chrono);
-      //  pause = findViewById(R.id.btnPause);
-      /*  start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!started) {
-                    chrono.setBase(SystemClock.elapsedRealtime() + stopped);
-                    chrono.start();
-                    started = true;
-                    paused = false;
-                }
-            }
-        });
-        pause.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!paused && started) {
-                    chrono.stop();
-                    stopped = chrono.getBase() - SystemClock.elapsedRealtime();
-                    started = false;
-                    paused = true;
-                }
-            }
-        });*/
         workoutRV = findViewById(R.id.workoutRV);
         workoutRV.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
@@ -126,11 +93,7 @@ public class WorkingOutActivity extends AppCompatActivity implements ConfettoGen
         finished = new Dialog(this);
     }
 
-  /*  @Override
-    protected void onDestroy() {
-        chrono.stop();
-        super.onDestroy();
-    }*/
+
 
     public void Celebrate() {
 
